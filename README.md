@@ -6,7 +6,7 @@ An educational cybersecurity game that combines maze-style gameplay with interac
 
 📌 Project Information
 
-Group Name: cyber guardians 
+Group Name: cyber guardians              
 University: CU London
 
 Group Members:
