@@ -1,95 +1,28 @@
-#🏠 Hacker House
+# Hacker House
 
-An educational cybersecurity game that combines maze-style gameplay with interactive quizzes to teach students how to identify phishing attacks and online scams.
+**Group:** Cyber Guardians  
+**University:** CU London  
+**Members:** Sujal, Sara, Bhabuk, Pragya
 
----
+## Introduction
 
-📌 Project Information
+**Hacker House** is a cybersecurity learning game made using Python in Visual Studio Code.
 
-Group Name: cyber guardians              
-University: CU London
+The game incorporates maze-like play style along with interactive cybersecurity quizzes where players need to unlock each secured door by answering questions about the dangers present in real-life cybersecurity threats.
 
-Group Members:
+Players will be acting as a hacker trying to penetrate a high-level security building and get out of it by unlocking each secured door, where they must first answer the question in order to open the door. The quizzes involve topics like phishing, scams, suspicious links and emails, etc., which helps students to learn more about cybersecurity and how to stay safe online.
 
-- Sujal
-- Sara
-- Bhabuk
-- Pragya
+Target audience of the game consists mostly of **students aged 13-16** years.
 
----
+## Technologies
 
-🎯 Objective
+- **Programming language:** Python
+- **Editor:** Visual Studio Code (VS Code)
 
-The aim of Hacker House is to educate students aged 13–16 about cybersecurity, with a particular focus on phishing awareness. The game encourages players to recognize phishing emails, scam links, and other common online threats while completing engaging gameplay challenges.
+## Repository Content
 
----
+Repository includes the full development of Hacker House prototype, containing source code, documentation and any other material related to the project.
 
-🎮 Game Description
+## Future Development
 
-In Hacker House, players take on the role of a hacker attempting to infiltrate a high-security headquarters. To escape the facility, players must solve hacking challenges and navigate through the environment.
-
-During the adventure, players encounter short cybersecurity quizzes covering topics such as:
-
-- Phishing emails
-- Scam links
-- Online fraud
-- Password security
-- Safe browsing practices
-
-The combination of puzzle-solving and educational quizzes creates an engaging learning experience while promoting cybersecurity awareness.
-
----
-
-👥 Target Audience
-
-Students aged 13–16 years.
-
----
-
-🛠️ Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Visual Studio Code (VS Code)
-
----
-
-✨ Features
-
-- Interactive maze-style gameplay
-- Cybersecurity awareness quizzes
-- Phishing and scam detection challenges
-- Simple and user-friendly interface
-- Educational and engaging learning experience
-
----
-
-🚀 Getting Started
-
-1. Clone or download this repository.
-2. Open the project folder in Visual Studio Code.
-3. Open "index.html" using Live Server (recommended) or any modern web browser.
-4. Play the game and improve your cybersecurity knowledge while escaping the headquarters.
-
----
-
-🔮 Future Improvements
-
-We plan to continue improving the game by adding:
-
-- More cybersecurity quiz questions
-- Additional game levels
-- Better graphics and animations
-- Sound effects and background music
-- Improved gameplay mechanics
-- Enhanced user experience
-
----
-
-📚 Educational Purpose
-
-This project was developed as part of a university project at CU London. Its purpose is to promote cybersecurity awareness through interactive and enjoyable gameplay.
-
----
- 503IT-Cybersecurity-game-Hacker-House-
+Hacker House is a developing project. Some future features will be gameplay improvement, adding new scenarios and dangers, new enemies AI, optimization, and other things.We hope you enjoy playing Hacker House while learning valuable cybersecurity skills.
