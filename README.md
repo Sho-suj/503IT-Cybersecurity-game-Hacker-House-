@@ -1,28 +1,11 @@
-# Hacker House
-
-**Group:** Cyber Guardians  
-**University:** CU London  
-**Members:** Sujal, Sara, Bhabuk, Pragya
-
-## Introduction
-
-**Hacker House** is a cybersecurity learning game made using Python in Visual Studio Code.
-
-The game incorporates maze-like play style along with interactive cybersecurity quizzes where players need to unlock each secured door by answering questions about the dangers present in real-life cybersecurity threats.
-
-Players will be acting as a hacker trying to penetrate a high-level security building and get out of it by unlocking each secured door, where they must first answer the question in order to open the door. The quizzes involve topics like phishing, scams, suspicious links and emails, etc., which helps students to learn more about cybersecurity and how to stay safe online.
-
-Target audience of the game consists mostly of **students aged 13-16** years.
-
-## Technologies
-
-- **Programming language:** Python
-- **Editor:** Visual Studio Code (VS Code)
-
-## Repository Content
-
-Repository includes the full development of Hacker House prototype, containing source code, documentation and any other material related to the project.
-
-## Future Development
-
-Hacker House is a developing project. Some future features will be gameplay improvement, adding new scenarios and dangers, new enemies AI, optimization, and other things.We hope you enjoy playing Hacker House while learning valuable cybersecurity skills.
+Group Name: cyber guardians 
+University: CU London
+Group Members: Sujal, Sara, Bhabuk, Pragya
+Game Title: Hacker House
+Objective: Phishing Awareness
+Target: Students (Specific age group 13-16)
+Tools Used: VS Code
+Language Used: Python 
+DESCRIPTION: 
+This game is about a hacker infiltrating a high security headquarters the main objective of the game is to hack the door and get out of the base. While hacking you will be met with a small quiz related to cybersecurity awareness. The questions will primarily focus on phishing attacks, scam links, etc. If you want to enjoy this game, you can play by running the final version of the game’s source codes in VS Code, where you will get to enjoy the game which is a blend of quiz and maze fun. All the details regarding the development of this prototype are published in this repository. Hope you will enjoy the Game!
+There will be more changes in the coming days, ensuring smooth gameplay with better awareness ideas!
