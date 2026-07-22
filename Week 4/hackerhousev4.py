@@ -87,8 +87,8 @@ MAP = [
     "#...#.#...I.#....#..#",
     "###.#.###.#.###.#...#",
     "#...J.#....#....#..X#",
-    "#####################"
 ]
+
 DOOR_LABELS = {
     "A": "1",
     "B": "2",
@@ -720,6 +720,7 @@ class HackerHouseApp:
         self.damage_flash = 0
         self.capture_sequence = False
         self.capture_timer = 0
+        self.capture_elapsed_time = None
         self.game_over = False
         self.has_keycard = False
         self.keycard_active = False
@@ -846,6 +847,9 @@ class HackerHouseApp:
         self.sound.tone(freq, dur)
 
     def elapsed_time(self):
+        if self.capture_sequence and self.capture_elapsed_time is not None:
+            return max(0.0, self.capture_elapsed_time)
+
         elapsed = time.time() - self.start_time - self.total_pause_time
 
         if self.scene in ("pause", "confirm") and self.pause_started is not None:
@@ -1867,20 +1871,30 @@ class HackerHouseApp:
         start = self.enemy_cell()
         path = self.find_path(start, target)
 
-        if len(path) < 2:
+        if not path:
             return False
 
-        next_x, next_y = path[1]
+        if len(path) == 1:
+            next_x, next_y = target
+        else:
+            next_x, next_y = path[1]
+
         dx = next_x - self.enemy_x
         dy = next_y - self.enemy_y
-        distance = (dx * dx + dy * dy) ** 0.5
+        distance = math.hypot(dx, dy)
 
-        if distance <= self.enemy_speed:
+        if distance <= 0.001:
+            self.enemy_x = float(next_x)
+            self.enemy_y = float(next_y)
+        elif distance <= self.enemy_speed:
             self.enemy_x = float(next_x)
             self.enemy_y = float(next_y)
         else:
             self.enemy_x += (dx / distance) * self.enemy_speed
             self.enemy_y += (dy / distance) * self.enemy_speed
+
+        self.enemy_x = max(0.0, min(float(len(self.grid[0]) - 1), self.enemy_x))
+        self.enemy_y = max(0.0, min(float(len(self.grid) - 1), self.enemy_y))
 
         return abs(self.enemy_x - target[0]) < 0.12 and abs(self.enemy_y - target[1]) < 0.12
 
@@ -2015,6 +2029,7 @@ class HackerHouseApp:
             return
 
         self.keys.clear()
+        self.capture_elapsed_time = self.elapsed_time()
         self.capture_sequence = True
         self.capture_timer = 0
         self.damage_flash = 18
@@ -2447,13 +2462,12 @@ class HackerHouseApp:
 
     def loop(self):
         if self.scene == "game":
-            self.update_game_timers()
-
             if self.capture_sequence:
                 self.update_capture_sequence()
                 if self.scene == "game":
                     self.draw_game()
             else:
+                self.update_game_timers()
                 self.update_player()
 
                 if self.scene == "game":
